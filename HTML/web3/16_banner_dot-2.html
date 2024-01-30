@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery - slideBanner</title>
+	<link rel="stylesheet" href="./css/slide_sytle.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#btn li').first().addClass('on');
+			$('#btn li').click(function(){
+				$('#btn li').removeClass('on');
+				$(this).addClass('on');
+				var i = $(this).index();
+				var slide = -(782*i);
+				$('#image').animate({
+					left:slide	})
+			});
+
+
+		})
+	</script>
+</head>
+<body>
+	<div id="banner">
+		<ul id="image">
+			<li><img src="./imgs/banner01.jpg" alt="이미지1"></li>
+			<li><img src="./imgs/banner02.jpg" alt="이미지2"></li>
+			<li><img src="./imgs/banner03.jpg" alt="이미지3"></li>
+			<li><img src="./imgs/banner04.jpg" alt="이미지4"></li>
+			<li><img src="./imgs/banner05.jpg" alt="이미지5"></li>
+		</ul>
+		<ul id="btn">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>			
+		</ul>
+	</div>
+</body>
+</html>

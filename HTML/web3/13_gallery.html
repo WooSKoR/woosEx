@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Gallery</title>
+	<link rel="stylesheet" href="./css/gallery_style.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#gbtn li').eq(1).click(function(){
+				$('p img').attr('src','imgs/banner02.jpg')
+			})
+		})
+	</script>
+
+
+</head>
+<body>
+	<h1>Image Gallery</h1>
+	<div id="gallery">
+		<ul id="gbtn">
+			<li><img src="imgs/banner01.jpg" alt="이미지1"></li>
+			<li><img src="imgs/banner02.jpg" alt="이미지2"></li>
+			<li><img src="imgs/banner03.jpg" alt="이미지3"></li>
+			<li><img src="imgs/banner04.jpg" alt="이미지4"></li>
+			<li><img src="imgs/banner05.jpg" alt="이미지5"></li>
+		</ul>
+		<p><img src="imgs/banner01.jpg" alt="이미지1"></p>
+	</div>
+	
+</body>
+</html>

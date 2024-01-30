@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery - slideBanner</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+	<link rel="stylesheet" href="./css/slide_sytle.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#btn li').first().addClass('on');
+
+			/* 아래쪽 버튼*/
+			$('#btn li').click(function(){
+				$('#btn li').removeClass('on');
+				$(this).addClass('on');
+				var i = $(this).index();
+				var slide = -(782*i);
+				$('#image').animate({
+					left:slide	})
+				page = i
+			});
+
+			/* 양 옆 버튼*/
+			var page=0;
+			$('#next').click(function(){
+				page = page + 1;
+				if(page>4){	page = 0 }
+					$('#btn li').eq(page).trigger('click');	});
+
+			$('#prev').click(function(){
+				page = page - 1;
+				if(page<0){	page = 4 }
+					$('#btn li').eq(page).trigger('click');	});
+
+
+
+
+		})
+	</script>
+</head>
+<body>
+	<div id="banner">
+		<ul id="image">
+			<li><img src="./imgs/banner01.jpg" alt="이미지1"></li>
+			<li><img src="./imgs/banner02.jpg" alt="이미지2"></li>
+			<li><img src="./imgs/banner03.jpg" alt="이미지3"></li>
+			<li><img src="./imgs/banner04.jpg" alt="이미지4"></li>
+			<li><img src="./imgs/banner05.jpg" alt="이미지5"></li>
+		</ul>
+		<ul id="btn">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>			
+		</ul>
+		<p id="prev"><span class="material-symbols-outlined">arrow_back_ios</span></p>
+		<p id="next"><span class="material-symbols-outlined">arrow_forward_ios</span></p>
+	</div>
+</body>
+</html>

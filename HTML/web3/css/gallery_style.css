@@ -1,0 +1,34 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+li{
+	list-style: none;
+}
+img{
+	vertical-align: middle;
+}
+h1{
+	font-size: 100px;
+	text-align: center;
+	margin: 0 auto;
+}
+#gallery{
+	width: 1082px;
+	margi: 0 auto;
+	background-color: #333;
+	padding: 20px;
+}
+#gallery #gbtn{
+	width: 220px;
+	overflow: hidden;
+	float: left;
+}
+#gallery #gbtn:nth-child(even){
+	float: right;
+}
+#gallery #gbtn li img{
+	width: 100px;
+	padding: 10px 5px;
+}
+#gallery p{
+	padding: 5px 5px;
+}

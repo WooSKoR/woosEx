@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disable Moving No Button</title>
+  <style>
+    /* Optional: 스타일링을 위한 CSS */
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<button id="noButton" onclick="alert('No clicked!')" onmouseover="disableNoButton()">No</button>
+
+<script>
+  function disableNoButton() {
+    alert('No button is now disabled.');
+    document.getElementById("noButton").disabled = true;
+  }
+</script>
+
+</body>
+</html>

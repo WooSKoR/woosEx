@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Gallery</title>
+	<link rel="stylesheet" href="./css/gallery_style.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#gbtn li a').click(function(){
+				$('p img').attr('src',$(this).attr('href'));
+				/* 스크립트 동작후에 태그가 동작해야하는데
+				   return false로 break 함 스크립트->태그 동작해야하지만 
+				   태그는 동작하지 않고 스크립트 동작이 실행됨*/
+				return false;
+			})
+
+		})
+	</script>
+
+
+</head>
+<body>
+	<h1>Image Gallery</h1>
+	<div id="gallery">
+		<ul id="gbtn">
+			<li><a href="imgs/banner01.jpg"><img src="imgs/banner01.jpg" alt="이미지1"></a></li>
+			<li><a href="imgs/banner02.jpg"><img src="imgs/banner02.jpg" alt="이미지2"></a></li>
+			<li><a href="imgs/banner03.jpg"><img src="imgs/banner03.jpg" alt="이미지3"></a></li>
+			<li><a href="imgs/banner04.jpg"><img src="imgs/banner04.jpg" alt="이미지4"></a></li>
+			<li><a href="imgs/banner05.jpg"><img src="imgs/banner05.jpg" alt="이미지5"></a></li>
+		</ul>
+		<p><img src="imgs/banner01.jpg" alt="이미지1"></p>
+	</div>
+	
+</body>
+</html>

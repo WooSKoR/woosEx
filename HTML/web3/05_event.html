@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="lp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Event</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<style>
+		*{margin: :0;padding: 0;box-sizing: border-box;}
+		h2{
+			margin-top: 20px;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #ccc;
+			margin: 20px;
+			text-align: center;
+			font-size: 24px;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+
+		/* 자기 자신을 변경할꺼라면 this 로 써도된다*/
+
+		$(document).ready(function(){
+
+			$('.box1').click(function(){
+				$(this).css('background-color','red');			})
+
+			$('.box2').dblclick(function(){
+				$(this).css('background-color','orange');			})
+
+
+			/*각각 마우스 오버,아웃으로 호출하여 값을 줘도됨*/
+			$('.box3').mouseover(function(){
+				$(this).css('background-color','yellow');
+			$('.box3').mouseout(function(){
+				$(this).css('background-color','transparent');			})			})
+
+
+			/*이미 마우스엔터 호출 하였으므로 뒤에 함수만 붙여서 사용도 가능*/
+			$('.box4').mouseenter(function(){
+				$(this).css('background-color','green').mouseleave(function(){
+					$(this).css('background-color','transparent');				});			})
+
+		
+			$('.box5').mousedown(function(){
+				$(this).css('background-color','blue').mouseup(function(){
+					$(this).css('background-color','transparent');			});			})  
+
+			$('.box6').mouseover(function(){
+				$(this).css('background-color','pink').mouseout(function(){
+					$(this).css('background-color','gray').click(function(){
+						$(this).css('background-color','purple')					})				})			})
+
+		})
+
+	</script>
+
+
+</head>
+<body>
+	<h1>jQuery 이벤트</h1>
+	<p>무언가를 발생되게 하는 동작</p>
+
+
+	<h2>MouseEvent - 마우스 동작</h2>
+	<ul>
+		<li>click - 마우스를 눌렀다가 떼는 동작</li>
+		<li>dblclick - 더블클릭</li>
+		<li>mouseover / mouseout - 영역에 마우스를 올리면 / 벗어나면 </li>
+		<li>mouseenter / mouseleave - 영역에 마우스를 올리면 / 벗어나면</li>
+		<li>mousedown / mouseup - 영역을 마우스로 누르고 있으면 / 누르고 있는 영역에서 떼면</li>
+	</ul>
+	
+
+	<div class="box1">click 하면 색상변경</div>
+	<div class="box2">dblclick 하면 색상변경</div>
+	<div class="box3">마우스오버</div>
+	<div class="box4">마오스엔터</div>
+	<div class="box5">마우스다운 / 업</div>
+
+	<div class="box6">마우스올리며 분홍 / 벗어나면 회색 / 클릭하면 보라색</div>
+</body>
+</html>

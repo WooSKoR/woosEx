@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery -Effects - Tab</title>
+	
+	<link rel="stylesheet" href="tab_style.css">
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#tab_con>div').first().show();
+			$('#tab_btn li').first().addClass('on');
+
+			$('#tab_btn li').click(function(){
+				$('#tab_btn li').removeClass('on');
+				$(this).addClass('on');
+				$('#tab_con>div').hide();
+				$('#tab_con>div').eq($(this).index()).show()
+			})
+			
+
+		})
+	</script>
+</head>
+<body>
+	<div id="tab">
+		<ul id="tab_btn">
+			<li>레시피</li>
+			<li>리빙</li>
+			<li>책방</li>
+		</ul>
+		<div id="tab_con">
+			<div class="recipe">
+				<dl>
+					<dt><img src="./imgs/recipe_01.jpg" alt="더덕구이"></dt>
+					<dd class="tab_title"><span>레시피 집중탐구</span>더덕구이</dd>
+					<dd>유장 소스와 고추장 양념에<br>노릇노릇 가볍게 구워요</dd>
+				</dl>
+				<dl>
+					<dt><img src="imgs/recipe_02.jpg" alt="아이스크림"></dt>
+					<dd class="tab_title"><span>푸드스토리</span>눈과 입을 즐겁게 할 이색 아이스크...</dd>
+					<dd>추운 겨울에도 달콤하게!<br>사계절이 즐거워지는 간식</dd>
+				</dl>
+				<dl>
+					<dt><img src="imgs/recipe_03.jpg" alt="꽈리고추 새우볶음"></dt>
+					<dd class="tab_title"><span>오늘의 푸드 TV</span>고소한 향이 솔솔 꽈리고추 새우볶음...</dd>
+					<dd>재료가 알맞게 익었을 때<br>참기름을 넣어 볶으면 완성</dd>
+				</dl>
+			</div>
+
+			<div class="living">
+				<dl>
+					<dt><img src="imgs/living_01.jfif" alt="신혼집 거실"></dt>
+					<dd>신혼집 거실 비포 애프터 포근하고 아늑한 모습</dd>
+					<dd>김꼬모</dd>
+				</dl>
+				<dl>
+					<dt><img src="imgs/living_02.jfif" alt="블루포인트 거실"></dt>
+					<dd>블루 포인트 거실 인테리어 나무아트월 쳄바보드 벽장...</dd>
+					<dd>정면돌파</dd>
+				</dl>
+				<dl>
+					<dt><img src="imgs/living_03.jfif" alt="건식 화장실"></dt>
+					<dd>화장실 리모델링 후, 건식으로 사용하고 있어요</dd>
+					<dd>쭈연맘</dd>
+				</dl>
+				<dl>
+					<dt><img src="imgs/living_04.jfif" alt="화이트우드 인테리어"></dt>
+					<dd>화이트우드 인테리어 랜선집들이 AI 거실인테리어 사진...</dd>
+					<dd>유짱</dd>
+				</dl>
+			</div>
+
+			<div class="book">
+				<dl>
+					<dt><img src="imgs/book_01.jpg" alt="이달의 베스트셀러"></dt>
+					<dd class="tab_title"><span>이달의 베스트셀러</span>요즘 무슨 책이 인기지?<br>도서 구매시 모두 무료배송</dd>
+					<dd>공단기 공부서점 추천</dd>
+				</dl>
+				<dl>
+					<dt><img src="imgs/book_02.jpg" alt="무료 배송"></dt>
+					<dd class="tab_title"><span>무료 배송</span>배송비 부담없이 즐기는 독서<br>1만원 이상 무료 배송</dd>
+					<dd>인터파크도서</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

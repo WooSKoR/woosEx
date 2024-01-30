@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery - selector </title>
+	<!-- js사용하기위하여 호출 -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<!-- jquery 사용 -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('*').css('font-size','48px');
+			$('h1').css('background-color','orange');
+			$('#aa').css('color','red');
+			$('.bb').css('color','blue');
+			$('.cc').css('background-color','navy');
+			$('.cc').css('color','white');
+			$('#dd').css({'background-color':'black','color':'yellow'});  /* : , 구별*/
+			$('#ee').addClass('ff')  /*id ee에 스타일에서 만든 클래스 ff를 입힘*/
+			$('p:nth-child(2)').css('border','2px solid red');
+			$('dd:last-of-type').css('background-color','pink');
+			});
+
+	</script>
+	<style>
+		.ff{
+			background-color: green;
+			color: yellowgreen;
+			border: 5px solid orange;
+		}
+	</style>
+</head>
+<body>
+	<h1> jQuery 선택자</h1>
+
+	<ul>
+		<li>전체선택자 : * </li>
+		<li>태그선택자 : 해당태그 </li>
+		<li id="aa">아이디선택자 : # </li>
+		<li class="bb">클래스선택자 : . </li>
+		<li class="cc">남색 배경 / 흰색 글자</li>
+		<li id="dd">검정색 배경 / 노랑색 글자</li>
+		<li id="ee">초속색 배경 / 연두색글자 / 주황색테두리</li>
+	</ul>
+
+	<div>
+		<p>1번 first-child  / nth-child(1)</p>
+		<p>2번 nth-child(2)</p>
+		<p>3번 last-child / nth-child(3)</p>
+	</div>
+
+	<dl>
+		<dt>형태구조선택자</dt>
+		<dd>first-of-type / nth-of-type(1)</dd>
+		<dd>nth-of-type(1)</dd>
+		<dd>last-of-type / nth-of-type(3)</dd>
+	</dl>
+	
+</body>
+</html>

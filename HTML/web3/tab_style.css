@@ -1,0 +1,89 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+	font-family: 'NanumSquareNeo-Variable';
+	font-size: 14px;
+}
+li{
+	list-style: none;
+}
+img{
+	vertical-align: middle;
+}
+
+#tab{
+	width:800px;
+	margin: 100px auto;
+}
+#tab #tab_btn{
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+#tab_btn li{
+	float: left;
+	width: 200px;
+	text-align: center;
+	border-bottom:2px solid #ccc;
+	padding: 10px 0;
+	cursor: pointer;
+	color:#666;
+}
+#tab_btn li.on{
+	border-color:green;
+	color:#000;
+	font-weight: bold;
+}
+
+#tab #tab_con{}
+#tab_con>div{
+	overflow: hidden;
+	display: none;
+}
+#tab_con>div dl{
+	float: left;
+	margin-right: 4%;
+}
+#tab_con>div dl:last-child{
+	margin-right: 0;
+}
+#tab_con .recipe dl{
+	width: 30.6%;
+}
+#tab_con .living dl{
+	width: 22%;
+}
+#tab_con .book dl{
+	width: 48%;
+}
+#tab_con>div dl img{
+	width: 100%;
+}
+#tab_con>div dl .tab_title{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#tab_con>div dl .tab_title span{
+	font-size: 14px;
+	display: block;
+	margin-bottom: 5px;
+	color: orange;
+}
+#tab_con>div dl dt{
+	margin-bottom: 5px;
+}
+#tab_con>div dl dd{
+	line-height: 23px;
+}
+#tab_con .book dl .tab_title span{
+	color: brown;
+}

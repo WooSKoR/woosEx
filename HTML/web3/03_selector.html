@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery - filtering </title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('*').css('font-size','35px');
+			$('li').first().css('border','2px solid blue');
+			$('li').last().css('border','2px solid orange');
+			$('li').eq(3).css('border','2px solid red');  /* 4 -> 인덱스 번호이므로 5번째 요소*/
+			$('li').even().css('background-color','skyblue');
+			$('li').odd().css('background-color','linen');
+		});
+	</script>
+
+
+
+</head>
+<body>
+	<h1>jQuery - 필터링</h1>
+
+	<ul>
+		<li>one  .first() : 선택한 요소중에서 첫번째 요소 </li>
+		<li>two  .last() : 선택한 요소중에서 마지막 요소 </li>
+		<li>three  eq(n) : 선택한 요소중에서 인덱스번호에 해당하는 요소 </li>
+	</ul>
+
+	<div>
+		<ul>
+			<li>1  even() : 선택한 요소중 짝수번째 요소 0포함</li>
+			<li>2 odd() : 선택한 요소중 홀수번째 요소 </li>
+			<li>3  .last() : 선택한 요소중에서 마지막 요소 </li>
+		</ul>
+	</div>
+	
+</body>
+</html>

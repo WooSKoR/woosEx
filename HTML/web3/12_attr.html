@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery attr()</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.i1').attr('width',300);
+			$('.i2').removeAttr('width');
+			$('.i3').mouseover(function(){
+				$(this).attr('src','imgs/img1.jpg')
+			}).mouseout(function(){
+				$(this).attr('src','imgs/img3.jpg')
+			})
+
+		})
+	</script>
+</head>
+<body>
+<h1>attr()</h1>
+	<p>선택한 요소의 속성값을 설정</p>
+	<img src="imgs/img1.jpg" alt="이미지1" class="i1">
+	<img src="imgs/img2.jpg" alt="이미지2" class="i2" width="1200">
+
+
+	<img src="imgs/img3.jpg" alt="이미지3" class="i3">
+</body>
+</html>

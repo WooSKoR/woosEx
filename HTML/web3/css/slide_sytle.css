@@ -1,0 +1,53 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+li{list-style: none;}
+img{vertical-align: middle;}
+
+#banner{
+	width: 782px;
+	height: 430px;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden; 
+}
+#banner #btn{
+	position: absolute;
+	bottom: 20px;
+	left :50%;
+	margin-left: -45px;
+}
+#banner #image{
+	width: 3910px;
+	position: relative;
+}
+#image li{
+	float: left;
+}
+#btn li{
+	width: 10px;
+	height: 10px;
+	background-color: #999;
+	border-radius: 5px;
+	float: left;
+	margin-right: 10px;
+}
+#btn li:last-child{
+	margin-right: 0;
+}
+#btn li.on{
+	background-color: red;
+}
+#banner p .material-symbols-outlined{
+	font-size: 48px;
+	color: red;
+	cursor: pointer;
+}
+#banner #prev{
+	position: absolute;
+	left: 20px;
+	top: 45%;
+}
+#banner #next{
+	position: absolute;
+	right: 20px;
+	top: 45%;
+}

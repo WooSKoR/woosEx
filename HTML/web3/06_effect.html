@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Effects</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<style>
+		*{margin: :0;padding: 0;box-sizing: border-box;}
+		body{height: 2500px;}
+		h2{
+			margin-top: 50px;
+		}
+		ul{overflow: hidden;
+			margin: 20px;
+		}
+		ul li{
+			width: 100px;
+			list-style: none;
+			float: left;
+			background-color: navy;
+			color: #fff;
+			text-align: center;
+			padding: 10px 0;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+
+		$('.b2').click(function(){	$('#pop').hide();			})
+		$('.b1').click(function(){	$('#pop').show(); 		})
+		$('.b3').click(function(){	$('#pop').toggle();		 })
+
+
+		$('.s2').click(function(){	$('#pop2').slideUp();		})
+		$('.s1').click(function(){	$('#pop2').slideDown();		})
+		$('.s3').click(function(){	$('#pop2').slideToggle();		})
+
+
+		$('.f2').click(function(){	$('#pop3').fadeOut();		})
+		$('.f1').click(function(){	$('#pop3').fadeIn();		})
+		$('.f3').click(function(){	$('#pop3').fadeToggle();		})
+
+
+
+		})
+	</script>
+</head>
+<body>
+	<h1>jQuery 효과</h1>
+
+	<h2>show() / hide() / toggle()</h2>
+	<ul>
+		<li class="b1">show()</li>
+		<li class="b2">hide()</li>
+		<li class="b3">toggle()</li>
+	</ul>
+	<div id="pop">
+		<img src="C:\Users\user\Downloads\web3\imgs\img1.jpg" alt="이미지1">
+	</div>
+
+	<h2>slideDown() 내려오면서 나타남/ slideUp() 올라가면서 사라짐 /  slideToggle()</h2>
+	<ul>
+		<li class="s1">slideDown()</li>
+		<li class="s2">slideUp()</li>
+		<li class="s3">slideToggle()</li>
+	</ul>
+	<div id="pop2">
+		<img src="C:\Users\user\Downloads\web3\imgs\img2.jpg" alt="이미지2">
+	</div>
+
+	<h2>fadeIn() / fadeOut() / fadeToggle()</h2>
+	<ul>
+		<li class="f1">fadeIn()</li>
+		<li class="f2">fadeOut()</li>
+		<li class="f3">fadeToggle()</li>
+	</ul>
+	<div id="pop3">
+		<img src="C:\Users\user\Downloads\web3\imgs\img3.jpg" alt="이미지3">
+	</div>
+
+
+	
+</body>
+</html>

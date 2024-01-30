@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery - slideBanner</title>
+	<link rel="stylesheet" href="./css/slide_sytle.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#btn li').first().addClass('on');
+			$('#btn li').eq(0).click(function(){
+				$('#image').animate({
+					left:'-0px'	});
+				$('#btn li').removeClass('on');
+				$(this).addClass('on')
+			})
+			$('#btn li').eq(1).click(function(){
+				$('#image').animate({
+					left:'-782px'	});
+				$('#btn li').removeClass('on');
+				$(this).addClass('on')
+			})
+			$('#btn li').eq(2).click(function(){
+				$('#image').animate({
+					left:'-1564px'	});
+				$('#btn li').removeClass('on');
+				$(this).addClass('on')
+			})
+			$('#btn li').eq(3).click(function(){
+				$('#image').animate({
+					left:'-2346px'	});
+				$('#btn li').removeClass('on');
+				$(this).addClass('on')
+			})
+			$('#btn li').eq(4).click(function(){
+				$('#image').animate({
+					left:'-3128px'	});
+				$('#btn li').removeClass('on');
+				$(this).addClass('on')
+			})
+
+
+
+		})
+	</script>
+</head>
+<body>
+	<div id="banner">
+		<ul id="image">
+			<li><img src="./imgs/banner01.jpg" alt="이미지1"></li>
+			<li><img src="./imgs/banner02.jpg" alt="이미지2"></li>
+			<li><img src="./imgs/banner03.jpg" alt="이미지3"></li>
+			<li><img src="./imgs/banner04.jpg" alt="이미지4"></li>
+			<li><img src="./imgs/banner05.jpg" alt="이미지5"></li>
+		</ul>
+		<ul id="btn">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>			
+		</ul>
+	</div>
+</body>
+</html>
